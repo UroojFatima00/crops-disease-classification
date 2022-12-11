@@ -40,7 +40,7 @@ def model_page():
     win.geometry("800x500+300+100")
     win.title("Plant Disease Classification ")
     win.config(bg="black")
-    img = ImageTk.PhotoImage(Image.open(r"C:\Users\Khadim Hussain\Pictures\data visualization.png").resize((300,240)))
+    img = ImageTk.PhotoImage(Image.open("potato.jpg").resize((300,240)))
     img_label = Label(win, image=img)
     img_label.place(x=300,y=30)
     pred_button = Button(win, text="Classify Disease", fg = "black", bg = "green", relief = "raised", font = ("arial", 16, "bold"), command= lambda:predict(pred_label))
@@ -53,7 +53,7 @@ def model_page():
 
 
 def login():
-    users = {'a': 'a'}
+    users = {'urooj': 'urooj'}
     username = userName.get()
     Pass = password.get()
     if username in users :
